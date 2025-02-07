@@ -29,11 +29,10 @@
     "require": {
         "illuminate/collections": "*",
         "livewire/livewire": "^3.5",
-        "mateffy/llm-magic": "dev-main"
+        "mateffy/llm-magic": "0.0.*"
     },
-    "minimum-stability": "dev",
     "prefer-stable": true,
-    "repositories": [
+    "__repositories": [
         {
             "type": "path",
             "url": "../llm-magic"
