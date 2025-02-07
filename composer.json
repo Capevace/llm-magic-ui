@@ -1,0 +1,42 @@
+{
+    "name": "mateffy/llm-magic-ui",
+    "description": "Ready-made Livewire components for use with mateffy/llm-magic.",
+    "type": "library",
+    "license": "AGPL-3.0-only",
+    "autoload": {
+        "psr-4": {
+            "Mateffy\\Magic\\Chat\\": "src/Chat/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Lukas Mateffy",
+            "email": "hey@mateffy.me"
+        }
+    ],
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mateffy\\Magic\\Chat\\MagicChatServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "illuminate/collections": "*",
+        "livewire/livewire": "^3.5",
+        "mateffy/llm-magic": "dev-main"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../llm-magic"
+        }
+    ]
+}
