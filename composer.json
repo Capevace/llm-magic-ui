@@ -22,7 +22,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Mateffy\\Magic\\Chat\\MagicChatServiceProvider"
+                "Mateffy\\Magic\\MagicChatServiceProvider"
             ]
         }
     },

@@ -1,6 +1,6 @@
 <?php
 
-namespace Mateffy\Magic\Chat;
+namespace Mateffy\Magic;
 
 use Livewire\Livewire;
 use Mateffy\Magic\Chat\Livewire\FakeLivewire;
@@ -13,7 +13,7 @@ class MagicChatServiceProvider extends PackageServiceProvider
     public function configurePackage(Package $package): void
     {
         $package
-            ->name('llm-magic-chat')
+            ->name('llm-magic-ui')
             ->hasRoutes('web')
             ->hasViews('llm-magic');
     }
