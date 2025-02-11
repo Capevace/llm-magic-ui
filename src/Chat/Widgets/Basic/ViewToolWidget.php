@@ -4,9 +4,9 @@ namespace Mateffy\Magic\Chat\Widgets\Basic;
 
 use Illuminate\View\View;
 use Mateffy\Magic\Chat\Widgets\Basic\ToolWidget;
-use Mateffy\Magic\Functions\InvokableFunction;
-use Mateffy\Magic\LLM\Message\FunctionInvocationMessage;
-use Mateffy\Magic\LLM\Message\FunctionOutputMessage;
+use Mateffy\Magic\Tools\InvokableFunction;
+use Mateffy\Magic\Models\Message\FunctionInvocationMessage;
+use Mateffy\Magic\Models\Message\FunctionOutputMessage;
 use Throwable;
 
 class ViewToolWidget extends ToolWidget

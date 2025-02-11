@@ -3,7 +3,7 @@
 namespace Mateffy\Magic\Chat;
 
 use Mateffy\Magic\Chat\Widgets\Basic\ToolWidget;
-use Mateffy\Magic\Functions\InvokableFunction;
+use Mateffy\Magic\Tools\InvokableFunction;
 
 interface ToolContainer
 {

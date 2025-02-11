@@ -5,9 +5,9 @@ namespace Mateffy\Magic\Chat\Widgets\Prebuilt;
 use Closure;
 use Illuminate\Support\Arr;
 use Illuminate\View\View;
-use Mateffy\Magic\Functions\InvokableFunction;
-use Mateffy\Magic\LLM\Message\FunctionInvocationMessage;
-use Mateffy\Magic\LLM\Message\FunctionOutputMessage;
+use Mateffy\Magic\Tools\InvokableFunction;
+use Mateffy\Magic\Models\Message\FunctionInvocationMessage;
+use Mateffy\Magic\Models\Message\FunctionOutputMessage;
 
 class VideoToolWidget extends ViewToolWidget
 {

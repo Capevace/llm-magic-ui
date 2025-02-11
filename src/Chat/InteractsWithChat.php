@@ -13,18 +13,18 @@ use Mateffy\Magic\Builder\ChatPreconfiguredModelBuilder;
 use Mateffy\Magic\Chat\Livewire\StreamableMessage;
 use Mateffy\Magic\Chat\Widgets\Basic\ToolWidget;
 use Mateffy\Magic\Chat\Widgets\Prebuilt\LoadingToolWidget;
-use Mateffy\Magic\Functions\InvokableFunction;
-use Mateffy\Magic\Functions\MagicFunction;
-use Mateffy\Magic\LLM\ElElEm;
-use Mateffy\Magic\LLM\LLM;
-use Mateffy\Magic\LLM\Message\FunctionCall;
-use Mateffy\Magic\LLM\Message\FunctionInvocationMessage;
-use Mateffy\Magic\LLM\Message\FunctionOutputMessage;
-use Mateffy\Magic\LLM\Message\Message;
-use Mateffy\Magic\LLM\Message\MultimodalMessage;
-use Mateffy\Magic\LLM\Message\MultimodalMessage\Text;
-use Mateffy\Magic\LLM\MessageCollection;
-use Mateffy\Magic\LLM\Models\Claude3Family;
+use Mateffy\Magic\Tools\InvokableFunction;
+use Mateffy\Magic\Tools\MagicTool;
+use Mateffy\Magic\Models\ElElEm;
+use Mateffy\Magic\Models\LLM;
+use Mateffy\Magic\Models\Message\FunctionCall;
+use Mateffy\Magic\Models\Message\FunctionInvocationMessage;
+use Mateffy\Magic\Models\Message\FunctionOutputMessage;
+use Mateffy\Magic\Models\Message\Message;
+use Mateffy\Magic\Models\Message\MultimodalMessage;
+use Mateffy\Magic\Models\Message\MultimodalMessage\Text;
+use Mateffy\Magic\Models\MessageCollection;
+use Mateffy\Magic\Models\Models\Claude3Family;
 use Mateffy\Magic;
 use Mateffy\Magic\Prompt\Role;
 use Mateffy\Magic\Prompt\TokenStats;
@@ -95,7 +95,7 @@ trait InteractsWithChat
 
             return $result->render(
                 tool: $message->schema
-                    ? new MagicFunction(
+                    ? new MagicTool(
                         name: $message->call->name,
                         schema: $message->schema,
                         callback: fn () => null, // Never called, as we're only rendering here

@@ -33,11 +33,11 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 use Livewire\Livewire;
 use Mateffy\Magic\Chat\Livewire\FakeLivewire;
-use Mateffy\Magic\Functions\InvokableFunction;
-use Mateffy\Magic\Functions\MagicFunction;
-use Mateffy\Magic\LLM\Message\FunctionCall;
-use Mateffy\Magic\LLM\Message\FunctionInvocationMessage;
-use Mateffy\Magic\LLM\Message\FunctionOutputMessage;
+use Mateffy\Magic\Tools\InvokableFunction;
+use Mateffy\Magic\Tools\MagicTool;
+use Mateffy\Magic\Models\Message\FunctionCall;
+use Mateffy\Magic\Models\Message\FunctionInvocationMessage;
+use Mateffy\Magic\Models\Message\FunctionOutputMessage;
 
 class FilamentToolWidget
 {
@@ -181,7 +181,7 @@ class FilamentToolWidget
 		$initialDataSchema = $this->getInitialDataSchema();
 
         return [
-            "find{$name}" => new MagicFunction(
+            "find{$name}" => new MagicTool(
                 name: "find{$name}",
                 schema: [
                     'type' => 'object',
@@ -219,7 +219,7 @@ class FilamentToolWidget
             /**
              * @description Use the search argument to show subsets of records! Always use the `search` argument, unless there's a specific filter for what you want filtered (example: dates).
              */
-            "list{$name}" => new MagicFunction(
+            "list{$name}" => new MagicTool(
                 name: "list{$name}",
                 schema: [
                     'type' => 'object',
@@ -248,7 +248,7 @@ class FilamentToolWidget
 					]
                 )
             ),
-			"create{$name}" => new MagicFunction(
+			"create{$name}" => new MagicTool(
                 name: "create{$name}",
                 schema: [
                     'type' => 'object',
@@ -261,7 +261,7 @@ class FilamentToolWidget
                     output: 'Successfully executed! The user now sees a form to create a new model'
                 )
             ),
-            "view{$name}" => new MagicFunction(
+            "view{$name}" => new MagicTool(
                 name: "view{$name}",
                 schema: [
                     'type' => 'object',

@@ -6,8 +6,8 @@ use Illuminate\Support\Facades\URL;
 use Livewire\Attributes\Locked;
 use Livewire\Attributes\On;
 use Livewire\Component;
-use Mateffy\Magic\LLM\Message\Message;
-use Mateffy\Magic\LLM\MessageCollection;
+use Mateffy\Magic\Models\Message\Message;
+use Mateffy\Magic\Models\MessageCollection;
 
 class StreamableMessage extends Component
 {

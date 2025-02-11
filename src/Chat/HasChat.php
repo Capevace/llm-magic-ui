@@ -3,7 +3,7 @@
 namespace Mateffy\Magic\Chat;
 
 use Mateffy\Magic\Chat\Widgets\Basic\ToolWidget;
-use Mateffy\Magic\LLM\Message\Message;
+use Mateffy\Magic\Models\Message\Message;
 
 interface HasChat
 {

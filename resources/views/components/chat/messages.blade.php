@@ -3,7 +3,7 @@
     'chat' => $this instanceof \Mateffy\Magic\Chat\HasChat
         ? get_class($this)
         : null,
-    'renderMessage' => fn (\Mateffy\Magic\LLM\Message\Message $message) => $this->renderMessage($message)
+    'renderMessage' => fn (\Mateffy\Magic\Models\Message\Message $message) => $this->renderMessage($message)
 ])
 
 <div

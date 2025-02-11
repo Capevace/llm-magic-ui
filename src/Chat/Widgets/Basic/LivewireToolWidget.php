@@ -5,9 +5,9 @@ namespace Mateffy\Magic\Chat\Widgets\Basic;
 use Closure;
 use Illuminate\Support\Facades\Blade;
 use Mateffy\Magic\Chat\Widgets\Basic\ToolWidget;
-use Mateffy\Magic\Functions\InvokableFunction;
-use Mateffy\Magic\LLM\Message\FunctionInvocationMessage;
-use Mateffy\Magic\LLM\Message\FunctionOutputMessage;
+use Mateffy\Magic\Tools\InvokableFunction;
+use Mateffy\Magic\Models\Message\FunctionInvocationMessage;
+use Mateffy\Magic\Models\Message\FunctionOutputMessage;
 
 
 class LivewireToolWidget extends ToolWidget

@@ -2,10 +2,10 @@
     /** @var InvokableFunction $tool */
     'tool',
 
-    /** @var \Mateffy\Magic\LLM\Message\FunctionInvocationMessage $invocation */
+    /** @var \Mateffy\Magic\Models\Message\FunctionInvocationMessage $invocation */
     'invocation',
 
-    /** @var ?\Mateffy\Magic\LLM\Message\FunctionOutputMessage $output */
+    /** @var ?\Mateffy\Magic\Models\Message\FunctionOutputMessage $output */
     'output' => null,
 
     'content',
@@ -24,14 +24,14 @@
 ])
 
 <x-llm-magic::tools.dropdown
-    :icon="$output ? $doneIcon : $loadingIcon"
-    :color="$output ? $doneIconColor : $loadingIconColor"
-    :label="$content"
-    :description="str($tool->name())->snake()->replace('_', ' ')->title()"
+		:icon="$output ? $doneIcon : $loadingIcon"
+		:color="$output ? $doneIconColor : $loadingIconColor"
+		:label="$content"
+		:description="str($tool->name())->snake()->replace('_', ' ')->title()"
 >
     <pre
-        {{ $attributes->class("prettyjson font-mono overflow-x-auto p-0.5")->style('font-size: 0.5rem') }}
-        x-data="{
+			{{ $attributes->class("prettyjson font-mono overflow-x-auto p-0.5")->style('font-size: 0.5rem') }}
+			x-data="{
             output: @js($output?->output),
             debugModeEnabled: false,
 
@@ -39,6 +39,6 @@
                 return window.prettyPrint(this.output);
             }
         }"
-        x-html="json"
-    ></pre>
-</x-tools.dropdown>
+			x-html="json"
+	></pre>
+	</x-tools.dropdown>

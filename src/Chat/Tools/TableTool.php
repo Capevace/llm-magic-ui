@@ -3,7 +3,7 @@
 namespace Mateffy\Magic\Chat\Tools;
 
 use Mateffy\Magic\Chat\Tool;
-use Mateffy\Magic\Functions\InvokableFunction;
+use Mateffy\Magic\Tools\InvokableFunction;
 
 //protected static function getToolWidgets(): array
 //    {

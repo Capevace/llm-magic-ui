@@ -8,8 +8,8 @@ use Mateffy\Magic\Chat\Tools\Concerns\HasDetailedView;
 use Mateffy\Magic\Chat\Widgets\Basic\ClosureToolWidget;
 use Mateffy\Magic\Chat\Widgets\Basic\ToolWidget;
 use Mateffy\Magic\Chat\Widgets\Prebuilt\LoadingToolWidget;
-use Mateffy\Magic\Functions\Concerns\ToolProcessor;
-use Mateffy\Magic\Functions\InvokableFunction;
+use Mateffy\Magic\Tools\Concerns\ToolProcessor;
+use Mateffy\Magic\Tools\InvokableFunction;
 use ReflectionException;
 
 class Tool extends BaseToolContainer
